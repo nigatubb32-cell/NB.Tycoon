@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="splash-screen">
+        <img src="banner.jpg" alt="NB Tycoon Banner" class="banner-img">
+        <p class="loading-text">Loading NB Tycoon...</p>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1 class="game-title">NB TYCOON</h1>
+            <div class="balance-card">
+                <span class="label">TOTAL BALANCE</span>
+                <h2 id="balance">0 <span>NB</span></h2>
+            </div>
+        </header>
+
+        <main id="tab-mining" class="tab-content active">
+            <div class="coin-wrapper" onclick="handleTap()">
+                <img src="logo.png" alt="NB Coin" id="main-coin">
+            </div>
+            <p class="tap-instruction">Tap the coin to mine NB!</p>
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn active">⛏️ Mining</button>
+            <button class="nav-btn">📋 Campaigns</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
