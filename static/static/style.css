@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0e14;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0b0e14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.banner-img {
+    width: 85%;
+    max-width: 320px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+.loading-text {
+    margin-top: 20px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-title {
+    color: #ffd700;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.balance-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.balance-card .label {
+    font-size: 12px;
+    color: #8a8f99;
+}
+
+.balance-card h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.balance-card h2 span {
+    color: #ffd700;
+    font-size: 20px;
+}
+
+.coin-wrapper {
+    margin: 40px 0;
+}
+
+#main-coin {
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+}
+
+#main-coin:active {
+    transform: scale(0.92);
+}
+
+.tap-instruction {
+    color: #8a8f99;
+    font-size: 14px;
+}
+
+.bottom-nav {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: #8a8f99;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nav-btn.active {
+    background: #ffd700;
+    color: #000000;
+}
+
