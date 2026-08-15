@@ -29,13 +29,58 @@
             <p class="tap-instruction">Tap the coin to mine NB!</p>
         </main>
 
+        <main id="tab-campaigns" class="tab-content" style="display: none;">
+            <div class="campaign-header">
+                <h3>📢 Sponsor Campaigns</h3>
+                <button class="add-task-btn" onclick="toggleCampaignForm()">+ Create Campaign</button>
+            </div>
+
+            <div id="tasks-list" class="tasks-container">
+                <div class="task-card">
+                    <div class="task-info">
+                        <strong>Join Official Channel</strong>
+                        <p>Reward: +500 NB</p>
+                    </div>
+                    <button class="join-btn" onclick="doTask('https://t.me/your_channel')">Join</button>
+                </div>
+            </div>
+
+            <div id="campaign-form-modal" class="form-modal" style="display: none;">
+                <div class="form-content">
+                    <h4>🚀 Promote Your Channel</h4>
+                    <form id="add-task-form" onsubmit="submitCampaign(event)">
+                        <input type="text" id="channel-link" placeholder="Telegram Channel Link (e.g. t.me/xxx)" required>
+                        <input type="number" id="task-users" placeholder="Target Users (e.g. 1000)" required>
+                        
+                        <label>Select Payment Method:</label>
+                        <select id="payment-method" onchange="updatePaymentAddress()">
+                            <option value="usdt">USDT (BEP20 / BNB Chain)</option>
+                            <option value="ltc">Litecoin (LTC)</option>
+                            <option value="stars">Telegram Stars ⭐️</option>
+                        </select>
+
+                        <div id="payment-details" class="payment-box">
+                            <p style="font-size: 12px; color: #8a8f99; margin-top: 5px;">Send Payment to Address:</p>
+                            <code id="wallet-address" style="word-break: break-all; color: #ffd700; font-size: 11px;">0xe860a178302d1d96d2e3061b66e29e286b88a5fc</code>
+                        </div>
+
+                        <input type="text" id="tx-hash" placeholder="Enter Transaction Hash / TxID" required style="margin-top: 10px;">
+
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-btn" id="verify-btn">Verify & Activate</button>
+                            <button type="button" class="cancel-btn" onclick="toggleCampaignForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
         <nav class="bottom-nav">
-            <button class="nav-btn active">⛏️ Mining</button>
-            <button class="nav-btn">📋 Campaigns</button>
+            <button class="nav-btn active" onclick="showTab('mining')">⛏️ Mining</button>
+            <button class="nav-btn" onclick="showTab('campaigns')">📋 Campaigns</button>
         </nav>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
